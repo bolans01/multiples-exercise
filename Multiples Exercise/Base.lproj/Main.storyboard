@@ -47,9 +47,9 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZf-ao-May" userLabel="multiplesLabel">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Add to add!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZf-ao-May" userLabel="multiplesLabel">
                                 <rect key="frame" x="110" y="125" width="380" height="130"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -60,6 +60,13 @@
                                     <action selector="onAddButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQZ-N5-Zc1"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9y-9o-ppB" userLabel="ResetButton">
+                                <rect key="frame" x="250" y="285" width="100" height="100"/>
+                                <state key="normal" image="turn-off"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vx3-JX-msY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -67,7 +74,9 @@
                             <constraint firstItem="vKn-lt-cTb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="3yb-3U-1zs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vKn-lt-cTb" secondAttribute="trailing" constant="-20" id="Eyw-g1-b80"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5eg-iK-1e2" secondAttribute="bottom" constant="82" id="Fi6-OG-Zh5"/>
+                            <constraint firstItem="5eg-iK-1e2" firstAttribute="top" secondItem="F9y-9o-ppB" secondAttribute="bottom" constant="32" id="Gt3-de-YEs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vKn-lt-cTb" secondAttribute="bottom" id="Jty-pM-NRe"/>
+                            <constraint firstItem="5eg-iK-1e2" firstAttribute="centerX" secondItem="F9y-9o-ppB" secondAttribute="centerX" id="Lw2-Nv-2hJ"/>
                             <constraint firstItem="pYe-Yy-wal" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TgD-6z-8Bq"/>
                             <constraint firstItem="u9a-5J-ZZo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V9L-f0-O5U"/>
                             <constraint firstItem="u9a-5J-ZZo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bkx-ci-dhO"/>
@@ -85,6 +94,7 @@
                         <outlet property="multiplesLabel" destination="NZf-ao-May" id="VlG-rU-lPw"/>
                         <outlet property="multiplesTextField" destination="mPA-Sq-Dmk" id="1az-a2-hAb"/>
                         <outlet property="playButton" destination="pYe-Yy-wal" id="X8b-mO-YZh"/>
+                        <outlet property="resetButton" destination="F9y-9o-ppB" id="1Zo-4x-fuG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,5 +107,6 @@
         <image name="add" width="211" height="101"/>
         <image name="chalkboard" width="801" height="750"/>
         <image name="play" width="272" height="268"/>
+        <image name="turn-off" width="128" height="128"/>
     </resources>
 </document>

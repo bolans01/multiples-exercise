@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     var userInputAmount = 0
     var calculatedMultiple = 0
-    var previousCalculatedMultiple = 0
+
   
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var logoImage: UIImageView!
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var multiplesLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
-    
+    @IBOutlet weak var resetButton: UIButton!
     
     
     
@@ -42,6 +42,7 @@ class ViewController: UIViewController {
             
             multiplesLabel.hidden = false
             addButton.hidden = false
+            resetButton.hidden = false
             
             userInputAmount = Int(multiplesTextField.text!)!
         }
@@ -53,10 +54,31 @@ class ViewController: UIViewController {
             updateMultiplesLabel()
     }
     
+    @IBAction func resetButtonPressed(sender: UIButton) {
+        resetGame()
+    }
+    
+    
+    
     func updateMultiplesLabel(){
         multiplesLabel.text = "\(calculatedMultiple - userInputAmount) + \(userInputAmount) = \(calculatedMultiple)"
     }
     
+    func resetGame(){
+        userInputAmount = 0
+        calculatedMultiple = 0
+        multiplesLabel.text = "Press Add to add!"
+        
+        playButton.hidden = false
+        logoImage.hidden = false
+        multiplesTextField.hidden = false
+        
+        multiplesTextField.text = ""
+        multiplesLabel.hidden = true
+        addButton.hidden = true
+        resetButton.hidden = true
 
+    }
+    
 }
 
