@@ -44,9 +44,6 @@ class ViewController: UIViewController {
             addButton.hidden = false
             
             userInputAmount = Int(multiplesTextField.text!)!
-           
-
-
         }
     }
     
